@@ -1,0 +1,57 @@
+<div class="container">
+  <br/> <br/> <br/> <br/>
+  <div class="row">
+    <div class="col">
+     <h1>We Make it Super<br/> <u>Simple &nbsp;&nbsp;&nbsp;   </u></h1>
+     <br/><br/>
+     <img src="../../assets/collect_img-video.png" style="width:500px;height:330px;" />
+    </div>
+    <div class="col-md-5">
+      <div class="card" style="width: 25rem;height:31rem;">
+        <div class="card-body">
+          <h5 class="card-title text-center">Eligibility Calculator</h5>
+          <br/>
+         <div class="form-group floating">
+         <input type="text" (keyup)="onKey($event)" class="form-control floating" id="usr"  required [(value)]="value" >
+          <label for="usr"> &#x20B9;Monthly Income</label>
+          
+          <ng5-slider style="margin-top: 15px;" [(value)]="value" [options]="options"></ng5-slider>
+        </div>
+       
+       <div class="form-group floating">
+       <input type="text" (keyup)="onKey1($event)" class="form-control floating" id="usr"  required [(value)]="value1" >
+        <label for="usr"> &#x20B9;Monthly Expensive</label>
+        
+        <ng5-slider style="margin-top: 15px;" [(value)]="value1" [options]="options"></ng5-slider>
+      </div>
+      
+     <div class="form-group floating">
+     <select  class="form-control floating" id="usr"  required >
+       <option>6 Month</option>
+       </select>
+      <label for="usr"> &#x20B9;Repayment Teure</label>
+      
+    </div>
+    <div class="form-group" style="margin-top: -40px;">
+      <span>Do you  have an any existing loan?</span><ui-switch  size="small" class="float-right" (change)="OnChange($event)"  defaultBgColor="#602593"[(ngModel)]="enable"></ui-switch>
+    </div>
+    <div class="form-group floating"><br/>
+      <input type="text" [disabled]="enable==true" (keyup)="onKey1($event)" class="form-control floating" id="usr"  required value="2000" >
+       <label for="usr"> &#x20B9;EMI of Existing loan(optional)</label>
+     </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col" style="margin-left: -60px;">
+    <br/><br/><br/><br/><br/>
+  <app-subhome></app-subhome>
+    </div>
+  </div>
+  <br/><br/>
+  <app-sublink></app-sublink>
+</div>
+<div>
+  <br/> <br/> <br/> <br/>
+</div>
+
